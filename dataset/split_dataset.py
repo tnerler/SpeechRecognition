@@ -4,12 +4,12 @@
 # Validation dataset of 500 audio files from Crema.
 # The rest of it, it will be train dataset.
 
-from dataset.get_dataset import get_dataset
+from dataset.str_to_int import processed_dataset
 import random
 
 random.seed(42)
 
-dataset = get_dataset()
+dataset = processed_dataset()
 
 crema = dataset["Crema"]
 savee = dataset["Savee"]
@@ -44,4 +44,3 @@ test_set = savee
 print(f"Train: {len(train_set)} samples")
 print(f"Validation: {len(val_set)} samples")
 print(f"Test: {len(test_set)} samples")
-print(test_set)

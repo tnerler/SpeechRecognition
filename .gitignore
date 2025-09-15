@@ -1,2 +1,4 @@
 # -- JSON files --
 test/
+.venv/
+__pycache__/
