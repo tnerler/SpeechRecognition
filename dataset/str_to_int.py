@@ -3,14 +3,7 @@ from dataset.get_dataset import get_dataset
 
 dataset = get_dataset()
 
-def processed_dataset():
-
-    sety = set()
-    for key, value in dataset.items():
-        for i in value:
-            sety.add(i["label"])
-
-    label_map = {
+label_map = {
         # anger
         "angry": 0, "ANG": 0, "anger": 0,
 
@@ -37,6 +30,12 @@ def processed_dataset():
         "calm": 7,
     }
 
+def processed_dataset():
+
+    sety = set()
+    for key, value in dataset.items():
+        for i in value:
+            sety.add(i["label"])
 
     for category in dataset:
         for item in dataset[category]:
